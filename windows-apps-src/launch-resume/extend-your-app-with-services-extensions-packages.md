@@ -54,12 +54,15 @@ Indicates whether there is programmatic support to acquire the content from with
 Provides functionality to decrease the time it takes to acquire the app from the store and start running.
 
 **Reduce disk footprint**
+
 Reduces the size of an app by only including necessary apps or resources.
 
 **Optimize packaging**
+
 Optimizes the app packaging process for large-scale or complex apps.
 
 **Reduce publishing time**
+
 Minimize the amount of time it takes to publish your app in the Store, local share, or web server.
 
 ## Technology descriptions (the columns in the table above)
@@ -69,6 +72,7 @@ Minimize the amount of time it takes to publish your app in the Store, local sha
 Resource packages are asset-only packages that allow your app to adapt to multiple display sizes and system languages. The resource package targets user language, system scale, and DirectX features, allowing the app to be tailored to a variety of user scenarios. Although an app package can contain several resources, the OS will only download the relevant resources per user device, saving bandwidth and disk space.
 
 **Asset package**
+
 Asset packages are a common, centralized source of executable, or non-executable files for use by your app. These are typically non-processor or language-specific files. For example, this might include a collection of pictures in one asset package, and videos in another asset package, both of which are used by the app. If your app supports multiple architectures and multiple languages, these assets could be included in the architecture package or resource package, but that also means the assets would be duplicated multiple times across the various architecture packages, taking up disk space. If asset packages are used, they only need to be included in the overall app package once. See [Introduction to asset packages](/windows/msix/package/asset-packages) to learn more.
 
 **Optional package**
@@ -76,6 +80,7 @@ Asset packages are a common, centralized source of executable, or non-executable
 Optional packages are used to either supplement or extend the original functionality of an app package. It's possible to publish an app, followed by publishing optional packages at a later time, or to publish both the app and optional packages simultaneously. By extending your app via an optional package, you have the advantages of distributing and monetizing content as a separate app package. Optional packages are typically intended to be developed by the original app developer, since they run with the identity of the main app (unlike app extensions). Depending on how you define your optional package, you can load code, assets, or code and assets from your optional package to your main app. If you need to enhance your app with content that can be monetized, licensed, and distributed separately, then optional packages might be the right choice for you. For implementation details, see [Optional packages and related set authoring](/windows/msix/package/optional-packages).
 
 **Flat bundle**
+
 [Flat bundle app packages](/windows/msix/package/flat-bundles) are similar to regular app bundles, except that instead of including all of the app packages within the folder, the flat bundle only contains *references* to those app packages. By containing references to app packages instead of the files themselves, a flat bundle will reduce the amount of time it takes to package and download an app.
 
 **App Extension**
